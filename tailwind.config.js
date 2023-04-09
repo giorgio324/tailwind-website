@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         primaryOrange: '#DF6951',
+        primaryFont: '#181E4B',
+        primaryFontGray: '#5E6282',
       },
     },
   },
