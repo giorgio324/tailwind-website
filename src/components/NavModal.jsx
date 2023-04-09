@@ -5,7 +5,7 @@ const NavModal = ({ isNavOpen, setIsNavOpen }) => {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className='flex justify-center items-center w-full h-full fixed top-0 bg-[#FFF1DA] overflow-hidden'>
+    <nav className='flex flex-col justify-center items-center w-full h-full fixed top-0 bg-[#FFF1DA] overflow-hidden'>
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
         className='absolute left-[90vw] top-9 cursor-pointer w-6'
@@ -21,6 +21,12 @@ const NavModal = ({ isNavOpen, setIsNavOpen }) => {
           </li>
         ))}
       </ul>
+      <div className='flex flex-col gap-y-6 items-center mt-8 text-3xl'>
+        <button>Login</button>
+        <button className='px-4 py-1 border border-gray-800 rounded hover:bg-gray-600 hover:text-white transition duration-300 ease-in-out'>
+          Sign Up
+        </button>
+      </div>
     </nav>
   );
 };

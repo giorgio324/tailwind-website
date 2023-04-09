@@ -6,7 +6,12 @@ import { navLinks } from '../data/linksData';
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <>
+    <section>
+      {isNavOpen ? (
+        <NavModal isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      ) : (
+        ''
+      )}
       <nav className='w-[90vw] font-medium mx-auto flex justify-between py-8 z-20 items-center'>
         <img src={logo} alt='' />
         <div
@@ -31,14 +36,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {isNavOpen ? (
-        <div>
-          <NavModal isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
-        </div>
-      ) : (
-        ''
-      )}
-    </>
+    </section>
   );
 };
 export default Navbar;
