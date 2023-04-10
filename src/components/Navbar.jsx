@@ -1,10 +1,19 @@
 import logo from '../assets/images/Logo.svg';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import NavModal from './NavModal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { navLinks } from '../data/linksData';
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  // this useeffect makes it so that user can not scroll on mobile nav
+  useEffect(() => {
+    const body = document.body;
+    if (isNavOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }, [isNavOpen]);
   return (
     <section>
       {isNavOpen ? (

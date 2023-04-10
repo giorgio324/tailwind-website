@@ -5,7 +5,7 @@ const NavModal = ({ isNavOpen, setIsNavOpen }) => {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className='flex flex-col justify-center items-center w-full h-full fixed top-0 bg-[#FFF1DA] overflow-hidden'>
+    <nav className='flex flex-col justify-center items-center w-full h-full fixed top-0 bg-[#FFF1DA] overflow-hidden z-50'>
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
         className='absolute left-[90vw] top-9 cursor-pointer w-6'
