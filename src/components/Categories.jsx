@@ -26,15 +26,20 @@ const Categories = () => {
         className='grid sm:grid-cols-2 lg:grid-cols-4 gap-x-16
       lg:gap-x-10 gap-y-12 justify-items-center items-center mt-24 '
       >
-        {serviceData.map((service) => {
+        {serviceData.map((service, index) => {
+          const isFirstCard = index === 0;
+          const isActiveCard =
+            activeCard === service.id || (isFirstCard && !activeCard);
           return (
             <div
-              className='flex flex-col justify-center items-center text-center rounded-3xl sm:p-4 lg:px-2 relative'
+              className={`flex flex-col justify-center items-center text-center rounded-3xl sm:p-4 lg:px-2 relative cursor-pointer ${
+                isFirstCard ? 'bg-white shadow-xl' : ''
+              }`}
               key={service.id}
               onClick={() => activateCard(service)}
               ref={(el) => (cardRef.current[service.id] = el)}
             >
-              {activeCard === service.id && (
+              {isActiveCard && (
                 <img
                   src={redDecor}
                   alt=''
