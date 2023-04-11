@@ -22,7 +22,7 @@ const Destinations = () => {
                 {index === topDestinationsData.length - 1 && (
                   <img
                     src={springDecor}
-                    className='absolute right-0 bottom-0 transform translate-x-[50%] -translate-y-8 -z-10'
+                    className='absolute hidden sm:inline-block right-0 bottom-0 transform translate-x-[50%] -translate-y-8 -z-10'
                     alt=''
                   />
                 )}
