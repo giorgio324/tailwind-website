@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Destinations from './components/Destinations';
 import BookTrip from './components/BookTrip';
+import Logos from './components/Logos';
 function App() {
   return (
     <main>
@@ -9,6 +10,7 @@ function App() {
       <Services />
       <Destinations />
       <BookTrip />
+      <Logos />
     </main>
   );
 }
