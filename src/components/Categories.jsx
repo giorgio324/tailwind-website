@@ -14,7 +14,7 @@ const Categories = () => {
     cardRef.current[service.id].classList.add('bg-white', 'shadow-xl');
   };
   return (
-    <div className='w-[90vw] mx-auto mt-20 relative'>
+    <div className='w-[90vw] mx-auto mt-28 relative'>
       <img src={plusDecor} alt='' className='absolute right-0 -z-10' />
       <div className='text-center'>
         <p className='text-primaryFontGray font-medium'>category</p>

@@ -3,7 +3,7 @@ import tripDurationIcon from '../assets/images/tripDurationIcon.svg';
 import springDecor from '../assets/images/springDecor.svg';
 const Destinations = () => {
   return (
-    <section className='w-full my-16' id='destinations'>
+    <section className='w-full mt-28' id='destinations'>
       <div className='w-[90vw] mx-auto'>
         <div className='text-center'>
           <p className='text-primaryFontGray'>Top Selling</p>
